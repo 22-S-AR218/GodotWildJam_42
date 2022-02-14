@@ -1,0 +1,32 @@
+{
+	"color": "#ffffffff",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1644871434.json",
+	"mirror_portraits": false,
+	"name": "Jeffrey",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": ""
+		},
+		{
+			"name": "",
+			"path": ""
+		},
+		{
+			"name": "",
+			"path": ""
+		},
+		{
+			"name": "Jeffrey",
+			"path": "res://Images/Jeffrey.png"
+		}
+	],
+	"scale": 100
+}
