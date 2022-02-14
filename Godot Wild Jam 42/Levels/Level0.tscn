@@ -27,15 +27,15 @@ current = true
 [node name="JeffreyNPC_Area2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 661, 634 )
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Keys3" type="Node2D" parent="."]
 
-[node name="Control" parent="." instance=ExtResource( 4 )]
-
-[node name="Keys" parent="." instance=ExtResource( 5 )]
+[node name="Keys" parent="Keys3" instance=ExtResource( 5 )]
 position = Vector2( 448, 768 )
 
-[node name="Keys2" parent="." instance=ExtResource( 5 )]
+[node name="Keys2" parent="Keys3" instance=ExtResource( 5 )]
 position = Vector2( 128, 384 )
+
+[node name="Control" parent="." instance=ExtResource( 4 )]
 
 [node name="Stairs" parent="." instance=ExtResource( 6 )]
 position = Vector2( 328, 1128 )
