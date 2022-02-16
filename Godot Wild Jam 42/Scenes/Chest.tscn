@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Tiles/Jenn_tileset.tres" type="TileSet" id=1]
+
+[node name="Chest" type="Area2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+collision_use_parent = true
+format = 1
+tile_data = PoolIntArray( 0, 0, 0 )
