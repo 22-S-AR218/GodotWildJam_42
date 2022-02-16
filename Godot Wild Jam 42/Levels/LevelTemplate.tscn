@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tiles/Jenn_tileset.tres" type="TileSet" id=2]
+
+[node name="Level_Template" type="Node2D"]
+
+[node name="WallsFloor" type="StaticBody2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="WallsFloor"]
+tile_set = ExtResource( 2 )
+collision_use_parent = true
+format = 1
+
+[node name="Fallzone" type="Area2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="Fallzone"]
+tile_set = ExtResource( 2 )
+collision_use_parent = true
+format = 1
+
+[node name="Keys" type="Node2D" parent="."]
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="Chests" type="Node2D" parent="."]
+
+[node name="Stairs2" type="Node2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
