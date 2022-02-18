@@ -60,7 +60,7 @@ GlobalVars="*res://Scripts/global_vars.gd"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg" )
+enabled=PoolStringArray(  )
 
 [physics]
 
