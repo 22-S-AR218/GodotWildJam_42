@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tiles/Jenn_tileset.tres" type="TileSet" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Sprites/coin.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/treasureChest.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/Colleen.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Tehya.tscn" type="PackedScene" id=9]
 
 [node name="Level_Template" type="Node2D"]
 
@@ -894,8 +895,13 @@ position = Vector2( -1879, 721 )
 position = Vector2( -356, -352 )
 texture = ExtResource( 4 )
 
+[node name="Tehya" parent="." instance=ExtResource( 9 )]
+position = Vector2( -112, 840 )
+
 [node name="Stairs" type="Node2D" parent="."]
+visible = false
 modulate = Color( 1, 0, 0, 1 )
 
 [node name="Stairs" parent="Stairs" instance=ExtResource( 5 )]
+visible = false
 position = Vector2( 3772, -64 )
