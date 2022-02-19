@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Fonts/D-DIN-Bold.otf" type="DynamicFontData" id=1]
-[ext_resource path="res://Levels/Level0.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Levels/Level_Colleen.tscn" type="PackedScene" id=2]
 [ext_resource path="res://MainMenu.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
@@ -35,7 +35,7 @@ corner_radius_bottom_left = 5
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource( 3 )
-mainGameScene = ExtResource( 2 )
+Level_Colleen = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1024.0
@@ -111,18 +111,17 @@ size_flags_vertical = 3
 custom_constants/margin_right = 50
 custom_constants/margin_left = 50
 
-[node name="Options" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2"]
+[node name="Instructions" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2"]
 margin_left = 50.0
 margin_right = 761.0
 margin_bottom = 76.0
-focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
 custom_styles/hover = SubResource( 3 )
 custom_styles/pressed = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
-text = "Options"
+text = "Instructions"
 
 [node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 margin_top = 192.0
@@ -147,3 +146,5 @@ custom_styles/normal = SubResource( 5 )
 text = "Made by"
 
 [connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/New Game" to="." method="_on_New_Game_button_up"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/Instructions" to="." method="_on_Instructions_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer3/Made By" to="." method="_on_Made_By_pressed"]
