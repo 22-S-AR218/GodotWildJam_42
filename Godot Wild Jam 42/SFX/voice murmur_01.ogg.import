@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/voice murmur_01.ogg-0c986af2a10d3749e2dac06f886d5ee1.oggstr"
+
+[deps]
+
+source_file="res://SFX/voice murmur_01.ogg"
+dest_files=[ "res://.import/voice murmur_01.ogg-0c986af2a10d3749e2dac06f886d5ee1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,16 +1,13 @@
 extends Area2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+func _on_Coins_body_entered(body: Node) -> void:
+
+	GlobalVars.coins += 1
+	$AudioStreamPlayer2D.play()
+	
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
+func _on_AudioStreamPlayer2D_finished() -> void:
+	queue_free()
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

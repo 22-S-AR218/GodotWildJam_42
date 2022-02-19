@@ -1,11 +1,130 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Tiles/Jenn_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Scripts/Chest.gd" type="Script" id=2]
+[ext_resource path="res://SFX/coins clanking_01.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Sprites/coin.png" type="Texture" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "CoinChest"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Coin:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Coin:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 33, -0.25, 0, 0.25, 0, 33, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Coin:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 22, -0.25, 0, 0.2, -47, -20, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Coin:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Coin:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Coin:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 33, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Coin:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 13, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Coin:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="Chest" type="Area2D"]
+script = ExtResource( 2 )
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="closed" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
 collision_use_parent = true
 format = 1
 tile_data = PoolIntArray( 0, 0, 0 )
+
+[node name="open" type="TileMap" parent="."]
+visible = false
+tile_set = ExtResource( 1 )
+collision_use_parent = true
+format = 1
+tile_data = PoolIntArray( 0, 14, 0 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Coin" type="Sprite" parent="."]
+position = Vector2( 33, 13 )
+scale = Vector2( 0.625, 0.625 )
+texture = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/CoinChest = SubResource( 1 )
+anims/RESET = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_Chest_body_entered"]

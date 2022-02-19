@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=22 format=2]
+[gd_resource type="TileSet" load_steps=23 format=2]
 
 [ext_resource path="res://Sprites/Castle_Floor.1.jpg" type="Texture" id=1]
 [ext_resource path="res://Sprites/coin.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Sprites/Stairs.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/RIGHT_castle_wall.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/LEFT_castle_wall.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Open chest.png" type="Texture" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -318,3 +319,17 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 13/shape_one_way_margin = 0.0
 13/shapes = [  ]
 13/z_index = 0
+14/name = "Open chest.png 14"
+14/texture = ExtResource( 11 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 0, 64, 64 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0

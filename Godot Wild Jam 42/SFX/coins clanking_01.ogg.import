@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/coins clanking_01.ogg-ea32d5e79b7f84111e21e6126bb5ecef.oggstr"
+
+[deps]
+
+source_file="res://SFX/coins clanking_01.ogg"
+dest_files=[ "res://.import/coins clanking_01.ogg-ea32d5e79b7f84111e21e6126bb5ecef.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Fonts/D-DIN-Bold.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Sprites/01_Tehya Sprite.png" type="Texture" id=2]
+[ext_resource path="res://SFX/voice murmur_01.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Scripts/Cameo.gd" type="Script" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 48.0
@@ -9,7 +11,8 @@ radius = 48.0
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 1 )
 
-[node name="Colleen" type="Area2D"]
+[node name="Tehya" type="Area2D"]
+script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
@@ -18,6 +21,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Label" type="Label" parent="."]
+visible = false
 margin_left = -88.0
 margin_top = 24.0
 margin_right = 112.0
@@ -27,3 +31,9 @@ text = "This is What Colleen Says!!!!!!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[connection signal="body_entered" from="." to="." method="_on_Tehya_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_AudioStreamPlayer2D_finished"]

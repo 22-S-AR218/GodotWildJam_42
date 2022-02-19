@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/level transition-stairs_01.ogg-8742c0fb0cf4195b313a85467ecd1106.oggstr"
+
+[deps]
+
+source_file="res://SFX/level transition-stairs_01.ogg"
+dest_files=[ "res://.import/level transition-stairs_01.ogg-8742c0fb0cf4195b313a85467ecd1106.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
