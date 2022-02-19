@@ -12,18 +12,21 @@ font_data = ExtResource( 1 )
 [node name="Colleen" type="Area2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 3, 3 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.68179, -0.840897 )
 shape = SubResource( 1 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = -88.0
-margin_top = 24.0
-margin_right = 112.0
-margin_bottom = 41.0
+margin_left = -92.2045
+margin_top = 41.8179
+margin_right = 115.796
+margin_bottom = 78.8179
 custom_fonts/font = SubResource( 2 )
-text = "This is What Colleen Says!!!!!!"
+text = "Welcome to level 1! Have fun 
+and good luck!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
