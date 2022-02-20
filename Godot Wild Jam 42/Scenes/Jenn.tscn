@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Fonts/D-DIN-Bold.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Sprites/01_Jen Sprite.png" type="Texture" id=2]
 [ext_resource path="res://SFX/voice murmur_01.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Scripts/Cameo.gd" type="Script" id=4]
-[ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 108.116
@@ -38,6 +37,5 @@ __meta__ = {
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
 
-[node name="HUD" parent="." instance=ExtResource( 5 )]
-
 [connection signal="body_entered" from="." to="." method="_on_Jenn_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_AudioStreamPlayer2D_finished"]

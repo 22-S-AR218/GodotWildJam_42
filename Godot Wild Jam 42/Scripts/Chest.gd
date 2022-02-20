@@ -8,7 +8,8 @@ func _ready() -> void:
 	$Coin.visible = false
 
 func _on_Chest_body_entered(body: Node) -> void:
-	if not collected and GlobalVars.keys >= 1:
+	if not collected and GlobalVars.keys >= 1 and body.get_name() == "Player":
+		monitoring = false
 		GlobalVars.chests += 1
 		get_parent().chests_to_open -= 1
 		GlobalVars.keys -= 1

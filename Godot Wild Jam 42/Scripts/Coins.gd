@@ -2,9 +2,10 @@ extends Area2D
 
 
 func _on_Coins_body_entered(body: Node) -> void:
-
-	GlobalVars.coins += 1
-	$AudioStreamPlayer2D.play()
+	if body.get_name() == "Player":
+		monitoring = false
+		GlobalVars.coins += 1
+		$AudioStreamPlayer2D.play()
 	
 
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Tiles/Jenn_tileset.tres" type="TileSet" id=1]
-[ext_resource path="res://Scenes/Coins.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Coins.gd" type="Script" id=2]
 [ext_resource path="res://SFX/coin collect_01.ogg" type="AudioStream" id=3]
 
 [node name="Coins" type="Area2D"]

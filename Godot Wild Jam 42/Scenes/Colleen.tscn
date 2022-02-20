@@ -38,3 +38,4 @@ __meta__ = {
 stream = ExtResource( 3 )
 
 [connection signal="body_entered" from="." to="." method="_on_Colleen_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_AudioStreamPlayer2D_finished"]

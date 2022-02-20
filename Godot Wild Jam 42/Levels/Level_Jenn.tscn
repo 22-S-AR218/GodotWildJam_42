@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Tiles/Jenn_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scripts/ChestTracker.gd" type="Script" id=8]
 [ext_resource path="res://Scripts/LevelTracker.gd" type="Script" id=9]
 [ext_resource path="res://Scripts/Fallblocks.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=11]
 
 [node name="Level_Jenn" type="Node2D"]
 script = ExtResource( 9 )
@@ -126,5 +127,7 @@ position = Vector2( 645, 3265 )
 
 [node name="Keys3" parent="Stairs/Key" instance=ExtResource( 4 )]
 position = Vector2( 2307, 3073 )
+
+[node name="HUD" parent="." instance=ExtResource( 11 )]
 
 [connection signal="body_entered" from="Fallzone" to="Fallzone" method="_on_Fallzone_body_entered"]

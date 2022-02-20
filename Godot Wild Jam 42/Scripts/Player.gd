@@ -22,4 +22,4 @@ func _physics_process(delta: float) -> void:
 	
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
-		print("collided with: ", collision.collider.name)
+		#print("collided with: ", collision.collider.name)
